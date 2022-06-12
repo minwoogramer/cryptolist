@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Coin from "./routes/Coin";
 import Coins from "./routes/Coins";
 import Chart from "./routes/Chart";
@@ -6,7 +6,7 @@ import Price from "./routes/Price";
 
 function Router() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Routes>
       <Route path="/" element={<Coins />}></Route>
         <Route path=":coinId/" element={<Coin />}>
@@ -15,7 +15,7 @@ function Router() {
         </Route>
    
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 export default Router;
